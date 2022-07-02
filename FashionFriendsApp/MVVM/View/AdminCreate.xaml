@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="FashionFriendsApp.MVVM.View.AdminCreate"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:FashionFriendsApp.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="600">
+
+    <StackPanel>
+        <TextBlock Text="Napravite novi proizvod" Foreground="White" FontSize="30" HorizontalAlignment="Center" Height="50"/>
+        <TextBox x:Name="txtNaziv" Margin="10 5" Foreground="White" materialDesign:HintAssist.Hint="Naziv proizvoda" BorderBrush="BlanchedAlmond" Width="250" CaretBrush="#ffd94448" SelectionBrush="Azure" />
+        <TextBox PreviewTextInput="txtCena_PreviewTextInput" x:Name="txtCena" Margin="10 5" Foreground="White" materialDesign:HintAssist.Hint="Cena proizvoda" BorderBrush="BlanchedAlmond"  Width="250" CaretBrush="#ffd94448" SelectionBrush="Azure" />
+        <TextBlock HorizontalAlignment="Center" x:Name="errorText" Foreground="red" FontSize="16" FontFamily="/Fonts/#Poppins" />
+        <Border Margin="0 0 0 10" Width="150" Height="150" BorderBrush="BlanchedAlmond" BorderThickness="1">
+            <Image  Width="150" Height="150" Name="imgPhoto" Stretch="Fill" />
+        </Border>
+        <TextBlock Height="1" Name="txtSlika" Visibility="Hidden" />
+        <Button Height="40" Width="200" materialDesign:ButtonAssist.CornerRadius="20" Name="btnLoad" FontFamily="/Fonts/#Poppins" FontSize="18" Click="btnLoad_Click">Izaberite sliku</Button>
+        <Button Background="Green" BorderBrush="Transparent" Height="40" Width="200" Margin="0 40 0 0" materialDesign:ButtonAssist.CornerRadius="20" FontFamily="/Fonts/#Poppins" FontSize="18" ToolTip="Kreirajte proizvod" x:Name="productCreate" Click="productCreate_Click">Kreirajte proizvod</Button>
+    </StackPanel>
+</UserControl>
